@@ -64,7 +64,7 @@ router.route('/userdata').get((req,res)=>{
 router.post('/users/login', (req, res, next) => {
     passport.authenticate('local', {
         successReturnToOrRedirect : '/welcome_land/',
-      failureRedirect: 'localhost:3000/authlogin',
+      failureRedirect: 'localhost:3001/authlogin',
       failureFlash: true
     })(req, res, next);
   });

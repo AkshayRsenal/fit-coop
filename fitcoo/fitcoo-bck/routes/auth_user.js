@@ -14,13 +14,13 @@ const app= express();
 // router.get('/register', forwardAuthenticated, (req, res) => res.render('register'));
 // router.get('/weconnector',function(req, res) {  Response.writeHead(3000,'http://localhost:3000/');});
 
-const targetBaseUrl = 'http://localhost:3000/';
+const targetBaseUrl = 'http://localhost:3001/';
 async function handleRedirect(req, res) {
   const targetUrl = targetBaseUrl + req.originalUrl;
   res.redirect(targetUrl);
 }
  app.get('*',  handleRedirect);
-const port = process.env.port || 3000;
+const port = process.env.port || 3001;
 app.listen(port);
 
 // router.route('/weconnector').get((req,res) => {
